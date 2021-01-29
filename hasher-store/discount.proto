@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package discount;
+
 option go_package = "discount";
 
 service DiscountService {
@@ -14,14 +16,6 @@ message GetDiscountRequest {
 message GetDiscountResponse {
   string product_id = 1;
   string user_id = 2;
-}
-
-message Product {
-  string id = 1;
-  int32 price_in_cents = 2;
-  string title = 3;
-  string description = 4;
-  Discount discount = 5;
 }
 
 message Discount {

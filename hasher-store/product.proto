@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "hasher-store/discount.proto";
+
+package product;
+
+
+option go_package = "discount";
+
+message Product {
+  string id = 1;
+  int32 price_in_cents = 2;
+  string title = 3;
+  string description = 4;
+  discount.Discount discount = 5;
+}
